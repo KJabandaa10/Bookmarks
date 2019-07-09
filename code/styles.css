@@ -1,0 +1,23 @@
+/*Global*/
+:root {
+  --mobile: 375px;
+  --desktop: 1440px;
+
+  --primary-blue: hsl(231, 69%, 60%);
+  --primary-red: hsl(0, 94%, 66%);
+  --gblue: hsl(229, 8%, 60%);
+  --vdarkblue: hsl(229, 31%, 21%);
+
+  --body: 18px;
+
+  --fw4: 400;
+  --fw5: 500;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Rubik", Helvetica, sans-serif;
+}
