@@ -21,3 +21,11 @@
 body {
   font-family: "Rubik", Helvetica, sans-serif;
 }
+/*navbar*/
+
+/*Desktop styles*/
+@media (min-width: 1440px) {
+  .mobile.only {
+    display: hidden;
+  }
+}
