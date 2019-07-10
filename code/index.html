@@ -12,10 +12,6 @@
       href="../images/favicon-32x32.png"
     />
     <title>Bookmark landing page</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Rubik&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <div class="container">
@@ -37,19 +33,20 @@
 
         <h1>A Simple Bookmark Manager</h1>
 
-        <p>
+        <p class="has-margin-bottom">
           A clean and simple interface to organize your favourite websites. Open
           a new browser tab and see your sites load instantly. Try it for free.
         </p>
 
-        <div class="get-btns">
+        <div class="get-btns has-margin-bottom">
           <button>Get it on Chrome</button>
+          <div class="btns-space"></div>
           <button>Get it on Firefox</button>
         </div>
       </section>
 
       <section class="features">
-        <div class="">
+        <div class="features-intro">
           <h2>Features</h2>
           <p>
             Our aim is to make it quick and easy for you to access your
@@ -58,10 +55,17 @@
           </p>
         </div>
 
+        <div class="features-tabs">
+          <a href="#"><p class="active inactive tab">Simple Bookmarking</p></a>
+          <a href="#"
+            ><p class="inactive tab tab-borderless">Speedy Searching</p></a
+          >
+          <a href="#"><p class="inactive tab">Easy Sharing</p></a>
+        </div>
+
         <div class="feature-cards">
           <!--Only show card when header is clicked(and hide others inactive)-->
           <div class="feature-card">
-            <a href="#"><p>Simple Bookmarking</p></a>
             <h3>Bookmark in one click</h3>
             <p>
               Organize your bookmarks however you like. Our simple drag-and-drop
@@ -71,7 +75,6 @@
             <button>More Info</button>
           </div>
           <div class="feature-card">
-            <a href="#"><p>Speedy Searching</p></a>
             <h4>Intelligent search</h4>
             <p>
               Our powerful search feature will help you find saved sites in no
@@ -80,7 +83,6 @@
             <button>More Info</button>
           </div>
           <div class="feature-card">
-            <a href="#"><p>Easy Sharing</p></a>
             <h5>Share your bookmarks</h5>
             <p>
               Easily share your bookmarks and collections with others. Create a
@@ -104,24 +106,26 @@
           <!--Staggered effect achieved with margin top and bottom on end cards-->
           <div class="download-card">
             <!--maybe: change svg width & height values-->
-
             <img src="../images/logo-chrome.svg" alt="Chrome" />
             <p class="card-header">Add to Chrome</p>
             <p>Minimum version 62</p>
+            <img src="../images/bg-dots" alt="dots" />
             <button>Add & Install Extension</button>
           </div>
 
           <div class="download-card">
             <img src="../images/logo-firefox.svg" alt="Firefox" />
-            <p class="header">Add to Firefox</p>
+            <p class="card-header">Add to Firefox</p>
             <p>Minimum version 55</p>
+            <img src="../images/bg-dots" alt="dots" />
             <button>Add & Install Extension</button>
           </div>
 
           <div class="download-card">
             <img src="../images/logo-opera.svg" alt="Opera" />
-            <p class="header">Add to Opera</p>
+            <p class="card-header">Add to Opera</p>
             <p>Minimum version 46</p>
+            <img src="../images/bg-dots" alt="dots" />
             <button>Add & Install Extension</button>
           </div>
         </div>
@@ -186,33 +190,32 @@
         </div>
         <button>More Info</button>
       </section>
+    </div>
 
-      <footer>
+    <footer>
+      <div class="footer-form">
         <p class="caps">35,000+ already joined</p>
 
-        <p><strong>Stay up-to-date with what we’re doing</strong></p>
-
+        <p>Stay up to date with what we're doing</p>
         <form>
           <input type="text" placeholder="Enter your email..." />
           <button class="btn-red">Contact Us</button>
         </form>
+      </div>
 
-        <div class="footer-flex">
-          <!-- justify content: space between-->
-          <div class="flex-1">
-            <!-- space around-->
-            <img src="../images/logo-bookmark.svg" alt="logo" />
+      <div class="footer-flex">
+        <div class="flex-1">
+          <img src="../images/logo-bookmark.svg" alt="logo" />
 
-            <p>Features</p>
-            <p>Pricing</p>
-            <p>Contact</p>
-          </div>
-          <div class="flex-2">
-            <img src="../images/icon-twitter.svg" alt="Twitter" />
-            <img src="../images/icon-facebook.svg" alt="Facebook" />
-          </div>
+          <p>Features</p>
+          <p>Pricing</p>
+          <p>Contact</p>
         </div>
-      </footer>
-    </div>
+        <div class="flex-2">
+          <img src="../images/icon-twitter.svg" alt="Twitter" />
+          <img src="../images/icon-facebook.svg" alt="Facebook" />
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap");
 /*Global*/
 :root {
   --mobile: 375px;
@@ -31,24 +32,167 @@ button {
   outline: none;
   border: none;
   transition: all 0.3s ease-out;
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 1.25em 2em;
+  border-radius: 5px;
+  font-weight: 600;
+}
+button:hover {
+  background-color: white;
+  color: var(--primary-blue);
+  box-shadow: 0 0 0 1px var(--primary-blue);
 }
 .container {
-  margin: 0 0.5em; /*change later*/
+  margin: 0 2em; /*change later*/
+}
+.has-margin-bottom {
+  margin-bottom: 1.2em;
+}
+h3,
+h4,
+h5,
+h6 {
+  font-size: 22px;
 }
 /*navbar*/
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 1em;
+  margin-bottom: 3em;
 }
 .navbar ul {
   display: none;
   flex-direction: row;
 }
-
 /*Hero*/
-/*Desktop styles*/
-@media (max-width: 375px) {
+.hero {
+  margin-bottom: 2em;
+}
+.hero h1 {
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 0.5em;
+}
+.get-btns {
+  display: grid;
+  grid-template-columns: 6fr 1fr 6fr;
+  margin: 3em 0 4.5em 0;
+}
+/*Features*/
+.features-intro {
+  margin: 1em 0 2em 0;
+}
+.features h2 {
+  margin: 1em;
+}
+.features p {
+  color: grey;
+}
+.features-tabs {
+  margin: 2em;
+}
+.tab {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding: 0.7em;
+}
+.tab-borderless {
+  border: none;
+}
+.active {
+  border-bottom: 2px solid var(--primary-red);
+}
+
+/*Download*/
+.features {
+  margin-bottom: 10rem;
+}
+.download-header p {
+  color: grey;
+  margin: 1em 0 3em 0;
+}
+.download-cards {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 2em;
+  margin: 1em 0;
+}
+.download-card {
+  display: grid;
+  grid-template-rows: 3fr, repeat(4, 1fr);
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  -webkit-box-shadow: 0px 13px 18px -3px rgba(82, 102, 223, 0.55);
+  -moz-box-shadow: 0px 13px 18px -3px rgba(82, 102, 223, 0.55);
+  box-shadow: 0px 13px 18px -3px rgba(82, 102, 223, 0.55);
+}
+p.card-header {
+  font-size: 24px;
+  font-weight: 900;
+}
+.download-card p:nth-child(3) {
+  color: grey;
+  margin: 1em;
+}
+.download-card > button {
+  max-width: 90%;
+  margin: auto;
+  white-space: nowrap;
+}
+.download-card img {
+  margin: 2em auto;
+}
+
+/*FAQs*/
+.faqs {
+  margin: 5em 0;
+}
+.faq-header {
+  margin: 2em 0;
+}
+.faq-header p.header {
+  font-size: 22px;
+  font-weight: 900;
+}
+.faq-header p:last-child {
+  color: grey;
+  margin: 1em 0;
+}
+/*more styles to come..*/
+
+/*Footer*/
+.footer-form {
+  background-color: var(--primary-blue);
+  padding: 2em 3em;
+  display: grid;
+  grid-template-rows: 1fr 1fr 3fr;
+  grid-row-gap: 1em;
+  color: white;
+}
+.footer-form p:nth-last-of-type(1) {
+  font-size: 22px;
+}
+.caps {
+  text-transform: uppercase;
+}
+.footer-flex {
+  background-color: var(--vdarkblue);
+  display: flex;
+  flex-direction: column;
+}
+
+/*media styles*/
+@media (max-width: 600px) {
+  html {
+    text-align: center;
+  }
   .desktop-only {
     display: none;
   }
