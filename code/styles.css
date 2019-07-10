@@ -17,6 +17,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100%;
 }
 body {
   font-family: "Rubik", Helvetica, sans-serif;
@@ -24,6 +25,15 @@ body {
 a {
   text-decoration: none;
   color: black; /*change*/
+}
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: all 0.3s ease-out;
+}
+.container {
+  margin: 0 0.5em; /*change later*/
 }
 /*navbar*/
 .navbar {
@@ -35,11 +45,8 @@ a {
   display: none;
   flex-direction: row;
 }
+
 /*Hero*/
-.hero .hero-svg {
-  width: 300px;
-  height: auto;
-}
 /*Desktop styles*/
 @media (max-width: 375px) {
   .desktop-only {
