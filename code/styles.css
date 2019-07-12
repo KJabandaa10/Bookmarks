@@ -165,7 +165,7 @@ p.card-header {
   color: grey;
   margin: 1em 0;
 }
-/*more styles to come..*/
+/*more styles..*/
 
 /*Footer*/
 .footer-form {
@@ -187,7 +187,27 @@ p.card-header {
   display: flex;
   flex-direction: column;
 }
-
+footer button {
+  background-color: var(--primary-red);
+}
+footer button:hover {
+  background-color: #ff1616;
+  color: whitesmoke;
+}
+footer form input {
+  padding: 1.2em;
+  border-radius: 5px;
+  border: none;
+}
+.footer-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.footer-flex * {
+  padding: 0.5em;
+  color: white;
+}
 /*media styles*/
 @media (max-width: 600px) {
   html {
