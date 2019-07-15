@@ -56,17 +56,20 @@
         </div>
 
         <div class="features-tabs">
-          <a href="#"><p class="active inactive tab">Simple Bookmarking</p></a>
-          <a href="#"
-            ><p class="inactive tab tab-borderless">Speedy Searching</p></a
+          <a href="#" class="tablinks" onclick="myFunc(event, 'tab1')"
+            ><p class="active tablinks tab">Simple Bookmarking</p></a
           >
-          <a href="#"><p class="inactive tab">Easy Sharing</p></a>
+          <a href="#" class="tablinks" onclick="myFunc(event, 'tab2')"
+            ><p class="tablinks tab tab-borderless">Speedy Searching</p></a
+          >
+          <a href="#" class="tablinks" onclick="myFunc(event, 'tab3')"
+            ><p class="tablinks tab">Easy Sharing</p></a
+          >
         </div>
 
         <div class="feature-cards">
-          <!--Only show card when header is clicked(and hide others inactive)-->
-          <div class="feature-card">
-            <h3>Bookmark in one click</h3>
+          <div class="tab-content">
+            <h3 id="bookmark">Bookmark in one click</h3>
             <p>
               Organize your bookmarks however you like. Our simple drag-and-drop
               interface gives you complete control over how you manage your
@@ -74,16 +77,16 @@
             </p>
             <button>More Info</button>
           </div>
-          <div class="feature-card">
-            <h4>Intelligent search</h4>
+          <div class="tab-content">
+            <h4 id="intelligent">Intelligent search</h4>
             <p>
               Our powerful search feature will help you find saved sites in no
               time at all. No need to trawl through all of your bookmarks.
             </p>
             <button>More Info</button>
           </div>
-          <div class="feature-card">
-            <h5>Share your bookmarks</h5>
+          <div class="tab-content">
+            <h5 id="share">Share your bookmarks</h5>
             <p>
               Easily share your bookmarks and collections with others. Create a
               shareable link that you can send at the click of a button.
@@ -92,7 +95,6 @@
           </div>
         </div>
       </section>
-
       <section class="download">
         <div class="download-header">
           <h6>Download the extension</h6>
@@ -130,7 +132,6 @@
           </div>
         </div>
       </section>
-
       <section class="faqs">
         <div class="faq-header">
           <p class="header">Frequently Asked Questions</p>
@@ -191,7 +192,6 @@
         <button>More Info</button>
       </section>
     </div>
-
     <footer>
       <div class="footer-form">
         <p class="caps">35,000+ already joined</p>
@@ -217,5 +217,24 @@
         </div>
       </div>
     </footer>
+    <script>
+      function myFunc(event, tabNumber) {
+        // Hide content
+        const tabContent = getElementsByClassName("tab-content");
+        for (i = 0, i < tabContent.length, i++) {
+          tabContent[i].style.display = "none";
+        }
+      }
+
+      // Get tablinks
+      const tablinks = document.getElementsByClassName("tablinks");
+      for(i = 0, i < tablinks.length, i++) {
+        tablinks[i].className = tablinks[i].className.replace("active", "");
+      }
+
+      //show current tab
+      document.getElementById(tabNumber).style.display = "block";
+      event.currentTarget.className += "active";
+    </script>
   </body>
 </html>

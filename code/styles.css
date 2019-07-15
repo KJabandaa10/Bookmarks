@@ -105,7 +105,9 @@ h6 {
 .active {
   border-bottom: 2px solid var(--primary-red);
 }
-
+.activated {
+  display: show;
+}
 /*Download*/
 .features {
   margin-bottom: 10rem;
