@@ -69,7 +69,7 @@
 
         <div class="feature-cards">
           <div class="tab-content">
-            <h3 id="bookmark">Bookmark in one click</h3>
+            <h3 id="tab1">Bookmark in one click</h3>
             <p>
               Organize your bookmarks however you like. Our simple drag-and-drop
               interface gives you complete control over how you manage your
@@ -78,7 +78,7 @@
             <button>More Info</button>
           </div>
           <div class="tab-content">
-            <h4 id="intelligent">Intelligent search</h4>
+            <h4 id="tab2">Intelligent search</h4>
             <p>
               Our powerful search feature will help you find saved sites in no
               time at all. No need to trawl through all of your bookmarks.
@@ -86,7 +86,7 @@
             <button>More Info</button>
           </div>
           <div class="tab-content">
-            <h5 id="share">Share your bookmarks</h5>
+            <h5 id="tab3">Share your bookmarks</h5>
             <p>
               Easily share your bookmarks and collections with others. Create a
               shareable link that you can send at the click of a button.
@@ -197,9 +197,11 @@
         <p class="caps">35,000+ already joined</p>
 
         <p>Stay up to date with what we're doing</p>
-        <form>
-          <input type="text" placeholder="Enter your email..." />
-          <button class="btn-red">Contact Us</button>
+        <form id="email-form">
+          <input type="text" placeholder="Enter your email..." name="email" />
+          <button class="btn-red" onsubmit="verifyEmail()">
+            Contact Us
+          </button>
         </form>
       </div>
 
@@ -218,23 +220,18 @@
       </div>
     </footer>
     <script>
-      function myFunc(event, tabNumber) {
-        // Hide content
-        const tabContent = getElementsByClassName("tab-content");
-        for (i = 0, i < tabContent.length, i++) {
-          tabContent[i].style.display = "none";
+      //tabs
+
+      // form validation
+      const emailInput = document.forms["email-form"]["email"].value;
+
+      function verifyEmail() {
+        if (emailInput == "") {
+          return false;
+        } else {
+          alert("You have subscribed to our newsletter!");
         }
       }
-
-      // Get tablinks
-      const tablinks = document.getElementsByClassName("tablinks");
-      for(i = 0, i < tablinks.length, i++) {
-        tablinks[i].className = tablinks[i].className.replace("active", "");
-      }
-
-      //show current tab
-      document.getElementById(tabNumber).style.display = "block";
-      event.currentTarget.className += "active";
     </script>
   </body>
 </html>
